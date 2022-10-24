@@ -1,12 +1,15 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+
 class bank{
+	//declaring member variables of the class bank.
 		char name[100];
 		char address[200];
 		char acc_type;
 		int balance;
 	public:
+	//declaring member methods  of the class bank
 		//This class will have the following major functions
 		void open_account();
 		void add_money();
@@ -15,6 +18,7 @@ class bank{
 		
 };
 
+//defining class member methods outside the class
 void bank :: open_account(){
 	cout<<"Enter your full name ::"<<endl;
 	cin.ignore();
@@ -59,6 +63,7 @@ void bank::withdraw_money(){
 		cout<<"current balance is "<<balance;
 	}
 }
+//main() method is an entry point for program execution
 int main(){
 	
 	while(1){
@@ -73,9 +78,10 @@ int main(){
 		
 		
 		cin>>choice;
+		//If any of the cases match the selection, that method will be executed. if not matches then default will execute.
 		switch(choice){
 			case 1:
-				obj.open_account();
+				obj.open_account(); // calling methods
 				break;
 			case 2:
 				obj.add_money();
@@ -86,7 +92,7 @@ int main(){
 			case 4:
 				obj.show_account();
 				break;
-			default:
+			default:  		//if no case matches the default execute.
 				cout<<"Exiting the process"<<endl;
 				return 0;
 		}
